@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -13,10 +13,12 @@
 
   <ItemGroup>
     <None Remove="Scripts\S202304151341_InitialScript.SQL" />
+    <None Remove="Scripts\S202305131100_BookCategoryTable.SQL" />
     <None Remove="Scripts\S202305131100_BookTable.SQL" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Scripts\S202305131100_BookCategoryTable.SQL" />
     <EmbeddedResource Include="Scripts\S202305131100_BookTable.SQL" />
     <EmbeddedResource Include="Scripts\S202304151341_InitialScript.SQL" />
   </ItemGroup>

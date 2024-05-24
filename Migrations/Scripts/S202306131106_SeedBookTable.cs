@@ -41,13 +41,14 @@ public class S202306131106_SeedBookTable : IScript
     public static void InsertEntry(SqlCommand command, string bookInfo)
     {
         const string query = @"
-INSERT INTO [dbo].[Book]([BookInfo],[LastModified])
-VALUES (@BookInfo,@LastModified)
-";
+        INSERT INTO [dbo].[Book]([BookInfo], [CategoryId], [LastModified])
+        VALUES (@BookInfo, @CategoryId, @LastModified)";
+
         var parameters = new
         {
             BookInfo = bookInfo,
-            LastModified = DateTime.UtcNow.AddHours(GetRandomInt(-100000, -1))
+            LastModified = DateTime.UtcNow.AddHours(GetRandomInt(-100000, -1)),
+            CategoryId = GetRandomInt(1, 14)
         };
 
         command.Connection.Execute(query, parameters, command.Transaction);
