@@ -11,8 +11,7 @@ namespace ElmBookShelf.Infrastructure.Common
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, string connectionString)
         {
             services.AddTransient<IDbConnection>((sp) => new SqlConnection(connectionString));
-            services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-            services.AddScoped(typeof(ICategoryRepository), typeof(CategoryRepository));
+            services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>)); 
             services.AddScoped(typeof(IBookRepository), typeof(BookRepository));
 
             return services;

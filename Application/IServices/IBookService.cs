@@ -5,8 +5,7 @@ using System.Threading.Tasks;
 namespace ElmBookShelf.Application.IServices
 {
     public interface IBookService
-    {
-        Task<BookViewModel> GetBook(long id);
-        Task<List<BookViewModel>> GetBooks(BookQueryOption queryOption);
+    { 
+        Task<List<BookViewModel>> GetBooks(QueryOption queryOption);
     }
 }

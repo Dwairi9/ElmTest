@@ -11,8 +11,7 @@ namespace ElmBookShelf.Application.Common
     {
         public static IServiceCollection AddApplication(this IServiceCollection services, string connectionString)
         { 
-            services.AddScoped(typeof(IBookService), typeof(BookService));
-            services.AddScoped(typeof(ICategoryService), typeof(CategoryService));
+            services.AddScoped(typeof(IBookService), typeof(BookService)); 
 
             services.AddInfrastructure(connectionString);
             return services;

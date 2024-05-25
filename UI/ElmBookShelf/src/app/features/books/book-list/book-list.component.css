@@ -1,0 +1,67 @@
+@media (min-width: 1400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 2000px;
+    }
+}
+
+@media (max-width: 600px) {
+    #table-scroll[_ngcontent-ng-c2950420345] {
+         
+        width: 352px;
+         
+    }
+}
+
+ 
+
+#table-wrapper {
+    position:relative;
+}
+
+#table-scroll {
+    
+    overflow:auto;  
+    margin-top:20px;
+}
+
+#table-wrapper table {
+    width:100%; 
+}
+ 
+
+#table-wrapper table thead th .text {
+    position:absolute;   
+    top:-20px;
+    z-index:2;
+    height:20px;
+    width:35%; 
+    border:1px solid red;
+}
+
+.cover-img {
+    width: 70px;
+    height: 70px;
+}
+
+#tbl-books {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #tbl-books td, #tbl-books th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #tbl-books tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #tbl-books tr:hover {background-color: #ddd;}
+  
+  #tbl-books th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #6e7bd9;
+    color: white !important;
+  }
